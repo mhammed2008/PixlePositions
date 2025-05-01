@@ -47,60 +47,57 @@ To set up a local development environment:
    cd pixlepositions
 Install dependencies:
 
-bash
-
     composer install
     npm install
     
 Create and configure the .env file:
 
-bash
-cp .env.example .env
+    cp .env.example .env
+    
 Generate application key:
 
-bash
-php artisan key:generate
+    php artisan key:generate
+    
 Run database migrations:
 
-bash
-php artisan migrate --seed
+    php artisan migrate --seed
+    
 Compile assets:
 
-bash
-npm run build
-Configuration
-Important environment variables:
+    npm run build
+    
+Configuration Important environment variables:
 
 env
-APP_NAME=PixlePositions
-APP_ENV=production
-APP_DEBUG=false
-APP_URL=https://pixlepositions-main-laoffp.laravel.cloud
 
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=pixlepositions
-DB_USERNAME=root
-DB_PASSWORD=
+    APP_NAME=PixlePositions
+    APP_ENV=production
+    APP_DEBUG=false
+    APP_URL=https://pixlepositions-main-laoffp.laravel.cloud
+    
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=pixlepositions
+    DB_USERNAME=root
+    DB_PASSWORD=
+    
+    BROADCAST_DRIVER=pusher
+    CACHE_DRIVER=redis
+    QUEUE_CONNECTION=redis
+    
+    PUSHER_APP_ID=
+    PUSHER_APP_KEY=
+    PUSHER_APP_SECRET=
+    PUSHER_APP_CLUSTER=
+    
+    MAPBOX_PUBLIC_KEY=
+    Development
+    Start the development server:
 
-BROADCAST_DRIVER=pusher
-CACHE_DRIVER=redis
-QUEUE_CONNECTION=redis
+Run Project:
 
-PUSHER_APP_ID=
-PUSHER_APP_KEY=
-PUSHER_APP_SECRET=
-PUSHER_APP_CLUSTER=
+    php artisan serve
+    npm run dev
 
-MAPBOX_PUBLIC_KEY=
-Development
-Start the development server:
 
-bash
-php artisan serve
-npm run dev
-Run tests:
-
-bash
-php artisan test
