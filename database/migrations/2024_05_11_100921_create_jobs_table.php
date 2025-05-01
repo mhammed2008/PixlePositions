@@ -12,7 +12,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('jobs', function (Blueprint $table) {
+        Schema::create('jobApps', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Employer::class);
             $table->string('title');
