@@ -48,8 +48,10 @@ To set up a local development environment:
 Install dependencies:
 
 bash
-composer install
-npm install
+
+    composer install
+    npm install
+    
 Create and configure the .env file:
 
 bash
